@@ -1,0 +1,14 @@
+[package]
+name = "instagram-images"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5.20", features = ["derive"] }
+image = { version = "0.25.5", default-features = false, features = ["jpeg"] }
+
+[profile.release]
+strip = true
+panic = "abort"
+lto = true
